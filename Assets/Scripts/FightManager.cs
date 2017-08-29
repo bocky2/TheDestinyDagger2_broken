@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightManagement : MonoBehaviour {
+public class FightManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
