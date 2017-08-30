@@ -23,45 +23,49 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if the up arrow key is pressed
+        //If the up arrow key is pressed
         if (Input.GetKey(KeyCode.UpArrow) == true)
         {
-            //move the player upwards
+            //Move the player upwards
             transform.Translate(Vector2.up * speed);
 
+            //Setting the animation parameters
             anim.SetBool("runU", true);
             anim.SetBool("runD", false);
             anim.SetBool("runR", false);
             anim.SetBool("runL", false);
         }
-        //if the down arrow key is pressed
+        //If the down arrow key is pressed
         else if (Input.GetKey(KeyCode.DownArrow) == true)
         {
-            //move the player downwards
+            //Move the player downwards
             transform.Translate(Vector2.down * speed);
 
+            //Setting the animation parameters
             anim.SetBool("runU", false);
             anim.SetBool("runD", true);
             anim.SetBool("runR", false);
             anim.SetBool("runL", false);
         }
-        //if the right arrow key is pressed
+        //If the right arrow key is pressed
         else if (Input.GetKey(KeyCode.RightArrow) == true)
         {
-            //move the player right
+            //Move the player right
             transform.Translate(Vector2.right * speed);
 
+            //Setting the animation parameters
             anim.SetBool("runU", false);
             anim.SetBool("runD", false);
             anim.SetBool("runR", true);
             anim.SetBool("runL", false);
         }
-        //if the left arrow key is pressed
+        //If the left arrow key is pressed
         else if (Input.GetKey(KeyCode.LeftArrow) == true)
         {
-            //move the player left
+            //Move the player left
             transform.Translate(Vector2.left * speed);
 
+            //Setting the animation parameters
             anim.SetBool("runU", false);
             anim.SetBool("runD", false);
             anim.SetBool("runR", false);
@@ -69,13 +73,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            //If nothing is being pressed, all parameters should equal false
             anim.SetBool("runU", false);
             anim.SetBool("runD", false);
             anim.SetBool("runR", false);
             anim.SetBool("runL", false);
         }
 
-        // -Alternative method \/
+        // -Alternative method
         /*
         //Calculating value that decides whether player is moving or not,
         //by detecting input on the horizontal and vertical axes
